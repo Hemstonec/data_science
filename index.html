@@ -106,23 +106,77 @@
         <div class="header-textbox">
           <!-- Replace with your name and job title -->
           <h1 class="h1">
-            <span>Hi, Hemstone</span>
-            <span>Data Scientist</span>
+            <span>Hi, I'm Hemstone</span>
+            <span id="job-title"></span>
           </h1>
-
+      
           <!-- Add a small introductory paragraph about yourself -->
           <p class="header-text">
-            A frontend software engineer and interface designer who builds UX
-            rich accessible and performant websites.
+            A frontend software engineer and interface designer who builds UX rich accessible and performant websites.
           </p>
-
+      
           <div class="header-btns">
             <a href="#contact" class="btn btn-cta">Hire me</a>
             <a href="#work" class="btn btn-secondary">See my work</a>
           </div>
         </div>
       </div>
-    </header>
+      </header>
+      
+      <script>
+        // Job titles to display with typing effect
+        const jobTitles = ["Data Scientist", "Big Data Analyst", "Business Analyst", "AI Specialist"];
+      
+        // Get the job title element
+        const jobTitleElement = document.getElementById('job-title');
+      
+        // Index to keep track of job titles
+        let titleIndex = 0;
+      
+        // Index to keep track of characters
+        let charIndex = 0;
+      
+        // Typing speed (milliseconds per character)
+        const typingSpeed = 100;
+      
+        // Function to type characters
+        function typeCharacter() {
+          // Add the next character to the text
+          jobTitleElement.textContent += jobTitles[titleIndex][charIndex];
+      
+          // Move to the next character
+          charIndex++;
+      
+          // Check if all characters have been typed
+          if (charIndex === jobTitles[titleIndex].length) {
+            setTimeout(deleteCharacter, 1000); // Wait before deleting characters
+          } else {
+            setTimeout(typeCharacter, typingSpeed); // Continue typing characters
+          }
+        }
+      
+        // Function to delete characters
+        function deleteCharacter() {
+          // Remove the last character from the text
+          jobTitleElement.textContent = jobTitleElement.textContent.slice(0, -1);
+      
+          // Check if all characters have been deleted
+          if (jobTitleElement.textContent === '') {
+            titleIndex++; // Move to the next job title
+            if (titleIndex >= jobTitles.length) {
+              titleIndex = 0; // Loop back to the first job title
+            }
+            charIndex = 0; // Reset character index
+            setTimeout(typeCharacter, 500); // Start typing the next job title after a short delay
+          } else {
+            setTimeout(deleteCharacter, typingSpeed); // Continue deleting characters
+          }
+        }
+      
+        // Start typing the initial job title
+        setTimeout(typeCharacter, 500);
+      </script>
+      
 
     <main>
       <section class="client">
