@@ -1315,8 +1315,8 @@ input:checked {
 /* Adjust WhatsApp icon size for smaller screens */
 @media screen and (max-width: 600px) {
   .whatsapp-icon {
-    width: 15px; /* Adjust size for smaller screens */
-    height: 15px; /* Adjust size for smaller screens */
+    width: 20px; /* Adjust size for smaller screens */
+    height: 20px; /* Adjust size for smaller screens */
   }
 }
 
