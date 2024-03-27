@@ -1258,13 +1258,23 @@ input:checked {
   flex-wrap: wrap;
   justify-content: center;
 }
+.skills-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skills-imgs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .skills-img {
   width: 100px;
   height: 100px;
   transition: transform 0.3s ease-in-out;
   padding: 12px;
-  background-color: #f5f5f5;
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   margin: 12px;
@@ -1272,7 +1282,7 @@ input:checked {
 }
 
 .skills-img:hover {
-  transform: scale(1.15) translateY(-15px);
+  transform: scale(1.2); /* Enlarge the icon on hover */
 }
 
 .skills-img.active {
@@ -1294,6 +1304,8 @@ input:checked {
 .skills-img {
   animation: float 3s ease-in-out infinite;
 }
+
+
 /* WhatsApp link style */
 .whatsapp-link {
   display: inline-flex;
