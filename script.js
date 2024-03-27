@@ -112,3 +112,26 @@ logosWrappers.forEach(async (logoWrapper, i) => {
 });
 
 yearEl.textContent = new Date().getFullYear();
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scrollToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("scrollToTopBtn").style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  const scrollDuration = 1000; // Duration of the scroll animation in milliseconds
+  const scrollStep = -window.scrollY / (scrollDuration / 15); // Step size for each scroll frame
+
+  const scrollInterval = setInterval(function() {
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, scrollStep);
+    } else {
+      clearInterval(scrollInterval);
+    }
+  }, 15); // Adjust the interval for smoother animation
+}
+

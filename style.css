@@ -1352,3 +1352,36 @@ input:checked {
   display: flex;
   align-items: center;
 }
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 10px; /* Adjusted bottom position */
+  right: 10px; /* Adjusted right position */
+  display: none;
+  background-color: #000; /* Button background color (black) */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 50%; /* Make it circular */
+  width: 30px; /* Adjusted button width */
+  height: 30px; /* Adjusted button height */
+  font-size: 16px; /* Adjusted icon size */
+  cursor: pointer;
+  animation: bounce 1s infinite; /* Faster bounce animation */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Initially no shadow */
+}
+
+#scrollToTopBtn:hover {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5); /* Black glowing effect */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px); /* Adjusted bounce height */
+  }
+  60% {
+    transform: translateY(-1.5px); /* Adjusted bounce height */
+  }
+}
