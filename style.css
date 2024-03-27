@@ -1294,7 +1294,6 @@ input:checked {
 .skills-img {
   animation: float 3s ease-in-out infinite;
 }
-
 /* WhatsApp link style */
 .whatsapp-link {
   display: inline-flex;
