@@ -1312,6 +1312,14 @@ input:checked {
   transition: transform 0.3s ease-in-out;
 }
 
+/* Adjust WhatsApp icon size for smaller screens */
+@media screen and (max-width: 600px) {
+  .whatsapp-icon {
+    width: 30px; /* Adjust size for smaller screens */
+    height: 30px; /* Adjust size for smaller screens */
+  }
+}
+
 /* Hover effect for WhatsApp icon */
 .whatsapp-link:hover .whatsapp-icon {
   transform: scale(1.2);
